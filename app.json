@@ -1,0 +1,28 @@
+{
+  "name": "Start on Heroku: PHP",
+  "description": "A barebones PHP app that makes use of the Silex web framework",
+  "repository": "https://github.com/heroku/php-getting-started",
+  "addons": [],
+  "env": {
+    "MINECRAFT_EULA": {
+      "description": "Do you accept the Minecraft EULA?",
+      "value": "true"
+    },
+    "NGROK_API_TOKEN": {
+      "description": "Your personal ngrok API token",
+      "required": true
+    }
+    "DROPBOX_API_TOKEN": {
+      "description": "Your personal Dropbox API token",
+      "required": "true"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-jvm-common"
+    },
+    {
+      "url": "https://github.com/kr/heroku-buildpack-inline.git"
+    }
+  ]
+}
